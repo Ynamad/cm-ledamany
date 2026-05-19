@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Services du Centre médical Le Damany – Médecine générale, gériatrie, diabétologie, médecine préventive, téléconsultation et urgences non vitales à Luxembourg. Prise de RDV sur Doctena." />
+  <meta name="keywords" content="services médecin généraliste Luxembourg, médecine générale Luxembourg, gériatrie Luxembourg, diabétologie Luxembourg, Centre médical Le Damany, Doctena Luxembourg" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cm-ledamany.lu/services.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Centre médical Le Damany - Services médicaux" />
+  <meta property="og:description" content="Médecine générale, gériatrie, diabétologie, médecine préventive, téléconsultation et labo BioNext. Cabinet conventionné CNS à Luxembourg." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cm-ledamany.lu/services.html" />
+  <meta property="og:locale" content="fr_LU" />
+  <meta property="og:site_name" content="Centre médical Le Damany" />
+
+  <title>Centre médical Le Damany - Services médicaux</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
+  <link rel="icon" href="/my-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Centre médical Le Damany" />
+  <link rel="manifest" href="/my-favicon/site.webmanifest" />
+
+  <!-- JSON-LD : services médicaux -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Centre médical Le Damany",
+    "url": "https://cm-ledamany.lu/services.html",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "217 rue Albert Unden",
+      "addressLocality": "Luxembourg",
+      "postalCode": "L-2652",
+      "addressCountry": "LU"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services médicaux",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "MedicalTherapy", "name": "Médecine générale"}},
+        {"@type": "Offer", "itemOffered": {"@type": "MedicalTherapy", "name": "Gériatrie"}},
+        {"@type": "Offer", "itemOffered": {"@type": "MedicalTherapy", "name": "Diabétologie"}},
+        {"@type": "Offer", "itemOffered": {"@type": "MedicalTherapy", "name": "Médecine préventive"}},
+        {"@type": "Offer", "itemOffered": {"@type": "MedicalTherapy", "name": "Téléconsultation"}}
+      ]
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <style>
+    /* === PAGE-SPECIFIC STYLES === */
+    .services-page { padding: 64px 0 96px; }
+
+    /* Doctor columns layout */
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 80px;
+    }
+    .doctor-col {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .doctor-col__header {
+      padding: 32px 32px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .doctor-col__avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+    .doctor-col__avatar--recruit {
+      background: rgba(0,51,102,0.12);
+    }
+    .doctor-col__name { font-weight: 700; font-size: 1rem; color: var(--slate); }
+    .doctor-col__role { font-size: 0.82rem; color: var(--slate-light); margin-top: 2px; }
+    .doctor-col__body { padding: 32px; }
+
+    /* Service item inside column */
+    .service-item {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border-solid);
+    }
+    .service-item:last-child { border-bottom: none; }
+    .service-item__icon {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: 10px;
+      background: var(--green-xlight);
+      display: grid;
+      place-items: center;
+      color: var(--green-dark);
+      flex-shrink: 0;
+    }
+    .service-item__icon i {
+      font-size: 15px;
+      line-height: 1;
+      display: block;
+    }
+    .service-item__text { flex: 1; }
+    .service-item__title { font-weight: 600; font-size: 0.9rem; color: var(--slate); margin-bottom: 2px; }
+    .service-item__desc { font-size: 0.82rem; color: var(--slate-light); line-height: 1.5; }
+
+    /* Recruit column style */
+    .doctor-col--recruit .doctor-col__header { background: rgba(0,51,102,0.04); }
+    .doctor-col--recruit .service-item__icon { background: rgba(0,51,102,0.08); color: var(--blue-logo); }
+
+    /* Teleconsultation note */
+    .telecons-note {
+      background: var(--green-xlight);
+      border: 1px solid var(--green-light);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .telecons-note i { color: var(--green-dark); font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
+    .telecons-note p { font-size: 0.875rem; color: var(--slate); line-height: 1.6; margin: 0; }
+
+    /* Bionext block */
+    .bionext-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: var(--shadow);
+      margin-bottom: 80px;
+    }
+    .bionext-card__icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--blue-logo), #1f5a9e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(0,51,102,0.3);
+    }
+    .bionext-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .bionext-tag {
+      background: var(--green-xlight);
+      border: 1px solid var(--green-light);
+      color: var(--green-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+    }
+    .bionext-card__visual {
+      background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fb 100%);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+    }
+    .bionext-card__visual i { font-size: 3rem; color: var(--blue-logo); margin-bottom: 16px; display: block; }
+    .bionext-card__hours { display: flex; gap: 16px; margin-top: 16px; justify-content: center; flex-wrap: wrap; }
+    .bionext-card__hour { background: white; border-radius: var(--radius-sm); padding: 12px 20px; text-align: center; font-size: 0.82rem; }
+    .bionext-card__hour strong { display: block; font-size: 1rem; color: var(--blue-logo); }
+
+    /* Bottom CTA */
+    .services-footer-cta {
+      text-align: center;
+      padding: 56px 32px;
+      background: var(--green-xlight);
+      border: 1px solid var(--green-light);
+      border-radius: var(--radius-xl);
+    }
+    .services-footer-cta h2 { margin-bottom: 12px; }
+    .services-footer-cta p { margin-bottom: 28px; color: var(--slate-light); }
+
+    /* Urgences redirect */
+    .urgences-redirect {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #fff9f0;
+      border: 1px solid #fcd34d;
+      border-radius: var(--radius);
+      padding: 20px 28px;
+      margin-bottom: 48px;
+    }
+    .urgences-redirect i { font-size: 1.4rem; color: #d97706; flex-shrink: 0; }
+    .urgences-redirect p { margin: 0; font-size: 0.875rem; color: var(--slate); line-height: 1.6; }
+    .urgences-redirect a { font-weight: 700; color: var(--green-dark); text-decoration: underline; }
+
+    @media (max-width: 900px) {
+      .doctors-grid { grid-template-columns: 1fr; }
+      .bionext-card { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .doctor-col__header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .doctor-col__body { padding: 20px; }
+      .bionext-tag { font-size: 0.72rem; padding: 4px 10px; }
+      .services-footer-cta { padding: 36px 20px; }
+      .bionext-card__logo { height: 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/logo.png" alt="Centre médical Le Damany" class="logo__img" />
+        <div class="logo__text">
+          <span class="logo__name">Centre médical Le Damany</span>
+          <span class="logo__subtitle" data-fr="Médecine générale · Luxembourg" data-en="General practice · Luxembourg">Médecine générale · Luxembourg</span>
+        </div>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li><a href="services.html" class="nav__link active" data-fr="Services" data-en="Services">Services</a></li>
+          <li><a href="about.html" class="nav__link" data-fr="Le cabinet" data-en="About">Le cabinet</a></li>
+          <li><a href="infos.html" class="nav__link" data-fr="Infos pratiques" data-en="Practical info">Infos pratiques</a></li>
+          <li><a href="urgences.html" class="nav__link nav__link--urgent" data-fr="Urgences" data-en="Emergencies">Urgences</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-toggle__option active" data-lang="fr">FR</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+        <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095" target="_blank" rel="noopener" class="btn btn--primary rdv-btn">
+          <i class="fas fa-calendar-plus"></i>
+          <span data-fr="Prendre RDV" data-en="Book now">Prendre RDV</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header">
+    <div class="container">
+      <nav class="page-header__breadcrumb" aria-label="breadcrumb">
+        <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+        <i class="fas fa-chevron-right"></i>
+        <span data-fr="Services" data-en="Services">Services</span>
+      </nav>
+      <h1 data-fr="Services médicaux" data-en="Medical Services">Services médicaux</h1>
+      <p data-fr="Un suivi médical complet, de la médecine générale à la gériatrie et la diabétologie, dans un cabinet moderne au cœur de Luxembourg."
+         data-en="Complete medical care, from general medicine to geriatrics and diabetology, in a modern practice in the heart of Luxembourg.">
+        Un suivi médical complet, de la médecine générale à la gériatrie et la diabétologie, dans un cabinet moderne au cœur de Luxembourg.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="services-page">
+    <div class="container">
+
+      <!-- Urgences redirect notice -->
+      <div class="urgences-redirect reveal visible">
+        <i class="fas fa-triangle-exclamation"></i>
+        <p data-html="true"
+           data-fr="<strong>En cas d'urgence vitale, appelez le 112.</strong> Pour les urgences non vitales du jour même, consultez la <a href='urgences.html'>page Urgences</a> pour connaître la marche à suivre."
+           data-en="<strong>In case of a life-threatening emergency, call 112.</strong> For same-day non-vital emergencies, see the <a href='urgences.html'>Emergencies page</a> for guidance.">
+          <strong>En cas d'urgence vitale, appelez le 112.</strong> Pour les urgences non vitales du jour même, consultez la <a href="urgences.html">page Urgences</a> pour connaître la marche à suivre.
+        </p>
+      </div>
+
+      <!-- ===== Section heading ===== -->
+      <div class="section__header reveal visible" style="margin-bottom:48px;">
+        <span class="section__tag" data-fr="L'équipe médicale" data-en="Medical team">L'équipe médicale</span>
+        <h2 data-fr="Services par médecin" data-en="Services by physician">Services par médecin</h2>
+        <p class="section__desc"
+           data-fr="Chaque médecin du cabinet dispose d'un profil et de compétences complémentaires."
+           data-en="Each physician at the practice has a distinct profile and complementary skills.">
+          Chaque médecin du cabinet dispose d'un profil et de compétences complémentaires.
+        </p>
+      </div>
+
+      <!-- ===== DOCTORS COLUMNS ===== -->
+      <div class="doctors-grid">
+
+        <!-- LEFT: Dr Le Damany -->
+        <div class="doctor-col reveal visible" style="--delay:0.05s">
+          <div class="doctor-col__header">
+            <div class="doctor-col__avatar">👩‍⚕️</div>
+            <div>
+              <div class="doctor-col__name">Dr Andreea Le Damany</div>
+              <div class="doctor-col__role" data-fr="Médecin généraliste · Gériatre · Diabétologue · Urgentiste" data-en="GP · Geriatrician · Diabetologist · Emergency physician">Médecin généraliste · Gériatre · Diabétologue · Urgentiste</div>
+            </div>
+          </div>
+          <div class="doctor-col__body">
+
+            <div id="medecine-generale">
+              <h3 style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green-dark);margin-bottom:12px;" data-fr="Médecine générale" data-en="General Medicine">Médecine générale</h3>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-stethoscope"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Consultation de médecine générale" data-en="General medicine consultation">Consultation de médecine générale</div>
+                  <div class="service-item__desc" data-fr="Suivi global, pathologies courantes, prescriptions, certificats." data-en="Holistic follow-up, common conditions, prescriptions, certificates.">Suivi global, pathologies courantes, prescriptions, certificats.</div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-file-medical"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Bilan de santé" data-en="Health check-up">Bilan de santé</div>
+                  <div class="service-item__desc" data-fr="Bilan annuel, suivi des maladies chroniques, coordination spécialistes." data-en="Annual check-up, chronic disease monitoring, specialist coordination.">Bilan annuel, suivi des maladies chroniques, coordination spécialistes.</div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-video"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Téléconsultation vidéo" data-en="Video teleconsultation">Téléconsultation vidéo</div>
+                  <div class="service-item__desc" data-fr="Suivi à distance via Doctena. Non remboursée par la CNS." data-en="Remote follow-up via Doctena. Not reimbursed by CNS.">Suivi à distance via Doctena. Non remboursée par la CNS.</div>
+                </div>
+              </div>
+            </div>
+
+            <div id="geriatrie" style="margin-top:24px;">
+              <h3 style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green-dark);margin-bottom:12px;" data-fr="Gériatrie" data-en="Geriatrics">Gériatrie</h3>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-heart-pulse"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Suivi gériatrique spécialisé" data-en="Specialised geriatric follow-up">Suivi gériatrique spécialisé</div>
+                  <div class="service-item__desc" data-fr="Évaluation globale de la personne âgée polypathologique, maintien à domicile." data-en="Global assessment of polypathalogic elderly patients, home care.">Évaluation globale de la personne âgée polypathologique, maintien à domicile.</div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-shield-halved"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Prévention des chutes &amp; fragilité" data-en="Fall prevention &amp; frailty">Prévention des chutes &amp; fragilité</div>
+                  <div class="service-item__desc" data-fr="Évaluation des risques, conseils d'adaptation du domicile." data-en="Risk assessment, home adaptation advice.">Évaluation des risques, conseils d'adaptation du domicile.</div>
+                </div>
+              </div>
+            </div>
+
+            <div id="diabetologie" style="margin-top:24px;">
+              <h3 style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green-dark);margin-bottom:12px;" data-fr="Diabétologie" data-en="Diabetology">Diabétologie</h3>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-droplet"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Suivi diabète type 1 &amp; 2" data-en="Type 1 &amp; 2 diabetes follow-up">Suivi diabète type 1 &amp; 2</div>
+                  <div class="service-item__desc" data-fr="Contrôle glycémique, ajustement thérapeutique, éducation du patient." data-en="Glycaemic control, treatment adjustment, patient education.">Contrôle glycémique, ajustement thérapeutique, éducation du patient.</div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-apple-alt"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Conseil nutritionnel &amp; prévention complications" data-en="Nutritional counselling &amp; complication prevention">Conseil nutritionnel &amp; prévention des complications</div>
+                  <div class="service-item__desc" data-fr="Suivi cardiovasculaire, rénal, ophtalmologique, podologique en coordination avec les spécialistes." data-en="Cardiovascular, renal, ophthalmological, podological monitoring coordinated with specialists.">Suivi cardiovasculaire, rénal, ophtalmologique, podologique en coordination avec les spécialistes.</div>
+                </div>
+              </div>
+            </div>
+
+            <div id="prevention" style="margin-top:24px;">
+              <h3 style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green-dark);margin-bottom:12px;" data-fr="Médecine préventive" data-en="Preventive Medicine">Médecine préventive</h3>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-syringe"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Vaccinations" data-en="Vaccinations">Vaccinations</div>
+                  <div class="service-item__desc" data-fr="Calendrier vaccinal, grippe, COVID, voyage." data-en="Vaccination schedule, flu, COVID, travel.">Calendrier vaccinal, grippe, COVID, voyage.</div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Dépistages" data-en="Screenings">Dépistages</div>
+                  <div class="service-item__desc" data-fr="Cancer colorectal, sein, col de l'utérus, prostate ; risque cardiovasculaire et métabolique." data-en="Colorectal, breast, cervical, prostate cancer; cardiovascular and metabolic risk.">Cancer colorectal, sein, col de l'utérus, prostate ; risque cardiovasculaire et métabolique.</div>
+                </div>
+              </div>
+              <div class="service-item">
+                <div class="service-item__icon"><i class="fas fa-plane-departure"></i></div>
+                <div class="service-item__text">
+                  <div class="service-item__title" data-fr="Médecine du voyage &amp; sevrage tabagique" data-en="Travel medicine &amp; smoking cessation">Médecine du voyage &amp; sevrage tabagique</div>
+                  <div class="service-item__desc" data-fr="Conseils et vaccins avant départ, aide personnalisée au sevrage." data-en="Travel advice and vaccines, personalised smoking cessation support.">Conseils et vaccins avant départ, aide personnalisée au sevrage.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RIGHT: Médecin associé (à venir) -->
+        <div class="doctor-col doctor-col--recruit reveal visible" style="--delay:0.15s">
+          <div class="doctor-col__header">
+            <div class="doctor-col__avatar doctor-col__avatar--recruit"><i class="fas fa-user-plus" style="color:var(--blue-logo);font-size:1.4rem;"></i></div>
+            <div>
+              <div class="doctor-col__name" data-fr="Médecin associé(e)" data-en="Associate physician">Médecin associé(e)</div>
+              <div class="doctor-col__role" data-fr="Poste en cours de recrutement" data-en="Position currently being recruited">Poste en cours de recrutement</div>
+            </div>
+          </div>
+          <div class="doctor-col__body">
+            <div style="padding:40px 0;text-align:center;">
+              <div style="width:72px;height:72px;border-radius:50%;background:rgba(0,51,102,0.08);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:2rem;color:var(--blue-logo);">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3 style="font-size:1rem;margin-bottom:12px;" data-fr="Un second médecin nous rejoindra bientôt" data-en="A second physician will join us soon">Un second médecin nous rejoindra bientôt</h3>
+              <p style="font-size:0.875rem;color:var(--slate-light);line-height:1.7;max-width:300px;margin:0 auto 28px;"
+                 data-fr="Le Centre médical Le Damany développe son équipe pour offrir des plages de rendez-vous élargies et des compétences complémentaires."
+                 data-en="Centre médical Le Damany is expanding its team to offer extended appointment slots and complementary skills.">
+                Le Centre médical Le Damany développe son équipe pour offrir des plages de rendez-vous élargies et des compétences complémentaires.
+              </p>
+              <a href="https://lu.indeed.com/viewjob?jk=f32af8c9e22e3333&from=shareddesktop_copy" target="_blank" rel="noopener" class="btn btn--small btn--indeed">
+                <img src="images/indeed_icon.png" alt="Indeed" style="height: 1em; width: auto; vertical-align: middle; margin-right: 4px;">
+                <span data-fr="Voir l'offre d'emploi" data-en="View job offer">Voir l'offre d'emploi</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /doctors-grid -->
+
+      <!-- ===== BIONEXT ===== -->
+      <div class="section__header reveal visible" style="margin-bottom:32px;">
+        <span class="section__tag" data-fr="Partenaire sur place" data-en="On-site partner">Partenaire sur place</span>
+        <h2 data-fr="Laboratoire BioNext" data-en="BioNext Laboratory">Laboratoire BioNext</h2>
+      </div>
+
+      <div class="bionext-card reveal visible">
+        <div>
+          <div class="bionext-card__icon"><i class="fas fa-flask"></i></div>
+          <h3 style="font-size:1.2rem;margin-bottom:10px;" data-fr="Analyses biologiques" data-en="Biological analyses">Analyses biologiques</h3>
+          <p style="font-size:0.875rem;color:var(--slate-light);line-height:1.7;margin-bottom:16px;"
+             data-fr="Le laboratoire BioNext est présent au sein du cabinet. Aucun déplacement supplémentaire nécessaire pour vos prises de sang et analyses."
+             data-en="The BioNext laboratory is located within the practice. No additional travel needed for blood tests and analyses.">
+            Le laboratoire BioNext est présent au sein du cabinet. Aucun déplacement supplémentaire nécessaire pour vos prises de sang et analyses.
+          </p>
+          <div class="bionext-items">
+            <span class="bionext-tag" data-fr="Prises de sang" data-en="Blood tests">Prises de sang</span>
+            <span class="bionext-tag" data-fr="Analyses d'urines" data-en="Urine analysis">Analyses d'urines</span>
+            <span class="bionext-tag" data-fr="Dépistage DPNI" data-en="NIPT screening">Dépistage DPNI</span>
+            <span class="bionext-tag" data-fr="Bilans MBnext" data-en="MBnext checks">Bilans MBnext</span>
+            <span class="bionext-tag" data-fr="Don de moelle" data-en="Bone marrow donation">Don de moelle</span>
+            <span class="bionext-tag" data-fr="Auto-prélèvement" data-en="Self-sampling">Auto-prélèvement</span>
+            <span class="bionext-tag" data-fr="Analyses des selles" data-en="Stool analysis">Analyses des selles</span>
+          </div>
+          <div style="margin-top:24px;">
+            <a href="https://www.bionext.lu/fr/laboratoire-luxembourg-limpertsberg-rue-albert-unden" target="_blank" rel="noopener" class="btn btn--secondary btn--small">
+              <i class="fas fa-external-link-alt"></i>
+              <span data-fr="Site BioNext" data-en="BioNext website">Site BioNext</span>
+            </a>
+          </div>
+        </div>
+        <div class="bionext-card__visual">
+          <img src="images/bionext-logo.png" alt="BioNext Luxembourg" class="bionext-card__logo" />
+          <p style="font-size:0.82rem;color:#4a6a9e;margin-top:12px;margin-bottom:16px;">217 rue Albert Unden<br>L-2652 Luxembourg</p>
+          <div class="bionext-card__hours">
+            <div class="bionext-card__hour">
+              <strong data-fr="Lun – Ven" data-en="Mon – Fri">Lun – Ven</strong>
+              06:00 – 12:00
+            </div>
+            <div class="bionext-card__hour">
+              <strong data-fr="Samedi" data-en="Saturday">Samedi</strong>
+              07:00 – 12:00
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== BOTTOM CTA (single, discreet) ===== -->
+      <div class="services-footer-cta reveal visible">
+        <span class="section__tag" data-fr="Prise de rendez-vous" data-en="Appointment booking">Prise de rendez-vous</span>
+        <h2 data-fr="Consulter Dr Le Damany" data-en="Book with Dr Le Damany">Consulter Dr Le Damany</h2>
+        <p data-fr="Consultations en présentiel ou par téléconsultation vidéo, disponibles via Doctena — 24h/24, 7j/7."
+           data-en="In-person or video teleconsultation appointments, available on Doctena — 24/7.">
+          Consultations en présentiel ou par téléconsultation vidéo, disponibles via Doctena — 24h/24, 7j/7.
+        </p>
+        <div class="telecons-note">
+          <i class="fas fa-info-circle"></i>
+          <p data-html="true"
+             data-fr="Les consultations en présentiel sont remboursées par la CNS. La téléconsultation vidéo n'est <strong>pas remboursée</strong> par la CNS. Pour toute urgence, consultez la <a href='urgences.html'>page Urgences</a>."
+             data-en="In-person consultations are reimbursed by CNS. Video teleconsultation is <strong>not reimbursed</strong> by CNS. For emergencies, see the <a href='urgences.html'>Emergencies page</a>.">
+            Les consultations en présentiel sont remboursées par la CNS. La téléconsultation vidéo n'est <strong>pas remboursée</strong> par la CNS. Pour toute urgence, consultez la <a href="urgences.html">page Urgences</a>.
+          </p>
+        </div>
+        <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095" target="_blank" rel="noopener" class="btn btn--primary btn--large">
+          <i class="fas fa-calendar-check"></i>
+          <span data-fr="Prendre rendez-vous sur Doctena" data-en="Book on Doctena">Prendre rendez-vous sur Doctena</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="footer__logo">
+          <img src="images/logo.png" alt="Centre médical Le Damany" class="logo__img" />
+          <div class="logo__text">
+            <span class="logo__name">Centre médical Le Damany</span>
+            <span class="logo__subtitle">Luxembourg</span>
+          </div>
+        </a>
+        <p class="footer__tagline" data-fr="Cabinet de médecine générale conventionné CNS à Luxembourg." data-en="CNS-accredited general practice in Luxembourg.">Cabinet de médecine générale conventionné CNS à Luxembourg.</p>
+        <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095" target="_blank" rel="noopener" class="btn btn--primary footer__rdv-btn">
+          <i class="fas fa-calendar-plus"></i>
+          <span data-fr="Prendre RDV" data-en="Book appointment">Prendre RDV</span>
+        </a>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title" data-fr="Navigation" data-en="Navigation">Navigation</h3>
+        <ul class="footer__links">
+          <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+          <li><a href="about.html" data-fr="Le cabinet" data-en="About">Le cabinet</a></li>
+          <li><a href="infos.html" data-fr="Infos pratiques" data-en="Practical info">Infos pratiques</a></li>
+          <li><a href="urgences.html" data-fr="Urgences" data-en="Emergencies">Urgences</a></li>
+          <li><a href="mailto:secretariat@cm-ledamany.com" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title" data-fr="Adresse &amp; Horaires" data-en="Address &amp; Hours">Adresse &amp; Horaires</h3>
+        <address class="footer__address">
+          <p><i class="fas fa-location-dot"></i> 217 rue Albert Unden<br>L-2652 Luxembourg</p>
+          <p class="footer__hours-label" data-fr="Consultations :" data-en="Consultations:">Consultations :</p>
+          <p data-fr="Lundi – Vendredi : 8h00 – 19h00" data-en="Monday – Friday: 8:00am – 7:00pm">Lundi – Vendredi : 8h00 – 19h00</p>
+        </address>
+        <a href="https://maps.google.com/?q=217+rue+Albert+Unden,+2652+Luxembourg" target="_blank" rel="noopener" class="footer__maps-link">
+          <i class="fab fa-google"></i>
+          <span data-fr="Ouvrir dans Google Maps" data-en="Open in Google Maps">Ouvrir dans Google Maps</span>
+        </a>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title" data-fr="Urgences" data-en="Emergencies">Urgences</h3>
+        <div class="footer__emergency">
+          <div class="footer__emergency-item footer__emergency-item--vital">
+            <span class="footer__emergency-num">112</span>
+            <span data-fr="Urgences vitales" data-en="Life-threatening emergencies">Urgences vitales</span>
+          </div>
+          <div class="footer__emergency-item">
+            <span class="footer__emergency-num" style="font-size:0.75rem;letter-spacing:.02em;">Garde</span>
+            <span data-fr="Maison médicale de garde" data-en="Out-of-hours medical centre">Maison médicale de garde</span>
+          </div>
+        </div>
+        <a href="urgences.html" class="footer__emergency-link">
+          <span data-fr="Que faire en cas d'urgence ?" data-en="What to do in an emergency?">Que faire en cas d'urgence ?</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p data-fr="© 2026 Centre médical Le Damany · Tous droits réservés" data-en="© 2026 Centre médical Le Damany · All rights reserved">© 2026 Centre médical Le Damany · Tous droits réservés</p>
+        <div class="footer__bottom-links">
+          <a href="infos.html#confidentialite" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a>
+          <a href="infos.html#mentions" data-fr="Mentions légales" data-en="Legal notices">Mentions légales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

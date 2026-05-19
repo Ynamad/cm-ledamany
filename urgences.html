@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Urgences médicales au Luxembourg – Centre médical Le Damany. Urgence vitale : appelez le 112. Maisons médicales de garde, hôpitaux et pharmacies de garde. Ressources officielles." />
+  <meta name="keywords" content="urgence médicale Luxembourg, 112 Luxembourg, maison médicale garde Luxembourg, pharmacie garde Luxembourg, urgence non vitale Luxembourg" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cm-ledamany.lu/urgences.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Centre médical Le Damany - Urgences médicales" />
+  <meta property="og:description" content="Urgence vitale : appelez le 112. Maisons médicales de garde, hôpitaux et ressources officielles pour les urgences médicales au Luxembourg." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cm-ledamany.lu/urgences.html" />
+  <meta property="og:locale" content="fr_LU" />
+  <meta property="og:site_name" content="Centre médical Le Damany" />
+
+  <title>Centre médical Le Damany - Urgences médicales</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
+  <link rel="icon" href="/my-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Centre médical Le Damany" />
+  <link rel="manifest" href="/my-favicon/site.webmanifest" />
+
+  <!-- JSON-LD : page urgences -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Urgences médicales – Centre médical Le Damany",
+    "description": "Informations sur les urgences médicales au Luxembourg. Numéro d'urgence vitale 112, maisons médicales de garde, hôpitaux.",
+    "url": "https://cm-ledamany.lu/urgences.html",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://cm-ledamany.lu/"},
+        {"@type": "ListItem", "position": 2, "name": "Urgences", "item": "https://cm-ledamany.lu/urgences.html"}
+      ]
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <style>
+    /* === PAGE-SPECIFIC === */
+    .urgences-page { padding: 56px 0 96px; }
+
+    /* Decision cards */
+    .decision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 64px;
+    }
+    .decision-card {
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      transition: transform var(--t), box-shadow var(--t);
+    }
+    .decision-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .decision-card--vital {
+      background: #fef2f2;
+      border: 2px solid #fca5a5;
+    }
+    .decision-card--nonvital {
+      background: var(--green-xlight);
+      border: 2px solid var(--green-light);
+    }
+    .decision-card__num {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .decision-card--vital .decision-card__num { color: #dc2626; }
+    .decision-card--nonvital .decision-card__num { color: var(--green-dark); }
+    .decision-card h2 { font-size: 1.2rem; margin-bottom: 12px; }
+    .decision-card p { font-size: 0.875rem; color: var(--slate-mid); line-height: 1.7; margin-bottom: 20px; }
+    .decision-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 28px;
+    }
+    .decision-card ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.84rem;
+      line-height: 1.5;
+      color: var(--slate-mid);
+    }
+    .decision-card ul li i { margin-top: 3px; flex-shrink: 0; font-size: 0.75rem; }
+    .decision-card--vital ul li i { color: #dc2626; }
+    .decision-card--nonvital ul li i { color: var(--green-dark); }
+    .call-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: all var(--t);
+    }
+    .call-link--red { background: #dc2626; color: white; box-shadow: 0 4px 16px rgba(220,38,38,.3); }
+    .call-link--red:hover { background: #b91c1c; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(220,38,38,.4); }
+    .call-link--green { background: var(--green-dark); color: white; box-shadow: 0 4px 16px rgba(43,164,102,.3); }
+    .call-link--green:hover { background: var(--green-deeper); transform: translateY(-2px); }
+
+    /* Resources section */
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+    .resource-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--t), box-shadow var(--t);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .resource-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-glow); border-color: var(--green-light); }
+    .resource-card__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius);
+      background: var(--green-xlight);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--green-dark);
+      flex-shrink: 0;
+    }
+    .resource-card h3 { font-size: 0.9rem; color: var(--slate); }
+    .resource-card p { font-size: 0.8rem; color: var(--slate-light); line-height: 1.5; }
+    .resource-card__arrow { color: var(--green-dark); font-size: 0.8rem; font-weight: 700; margin-top: auto; }
+
+    /* CHL notice */
+    .chl-notice {
+      background: #f0f6ff;
+      border: 1px solid rgba(45,120,198,0.2);
+      border-radius: var(--radius);
+      padding: 20px 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 64px;
+    }
+    .chl-notice i { color: var(--blue-logo); font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .chl-notice p { font-size: 0.875rem; color: var(--slate); line-height: 1.7; margin: 0; }
+    .chl-notice strong { color: var(--slate); }
+
+    /* Cabinet note */
+    .cabinet-note {
+      background: var(--green-xlight);
+      border: 1px solid var(--green-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .cabinet-note__icon { font-size: 2rem; color: var(--green-dark); flex-shrink: 0; }
+    .cabinet-note p { font-size: 0.9rem; color: var(--slate-mid); line-height: 1.7; margin: 0; }
+    .cabinet-note a { color: var(--green-dark); font-weight: 700; text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .decision-grid { grid-template-columns: 1fr; }
+      .resources-grid { grid-template-columns: 1fr; }
+      .cabinet-note { flex-direction: column; text-align: center; }
+      .call-btn { font-size: 1.2rem; padding: 18px 28px; }
+    }
+    @media (max-width: 480px) {
+      .decision-card { padding: 28px 18px; }
+      .decision-number { font-size: 3.5rem; }
+      .step { padding: 12px 14px; }
+      .number-card { padding: 20px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/logo.png" alt="Centre médical Le Damany" class="logo__img" />
+        <div class="logo__text">
+          <span class="logo__name">Centre médical Le Damany</span>
+          <span class="logo__subtitle" data-fr="Médecine générale · Luxembourg" data-en="General practice · Luxembourg">Médecine générale · Luxembourg</span>
+        </div>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li><a href="services.html" class="nav__link" data-fr="Services" data-en="Services">Services</a></li>
+          <li><a href="about.html" class="nav__link" data-fr="Le cabinet" data-en="About">Le cabinet</a></li>
+          <li><a href="infos.html" class="nav__link" data-fr="Infos pratiques" data-en="Practical info">Infos pratiques</a></li>
+          <li><a href="urgences.html" class="nav__link nav__link--urgent active" data-fr="Urgences" data-en="Emergencies">Urgences</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-toggle__option active" data-lang="fr">FR</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+        <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095" target="_blank" rel="noopener" class="btn btn--primary rdv-btn">
+          <i class="fas fa-calendar-plus"></i>
+          <span data-fr="Prendre RDV" data-en="Book now">Prendre RDV</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-header" style="background:#fff9f0; border-bottom: 1px solid #fcd34d;">
+    <div class="container">
+      <nav class="page-header__breadcrumb" aria-label="breadcrumb">
+        <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+        <i class="fas fa-chevron-right"></i>
+        <span data-fr="Urgences" data-en="Emergencies">Urgences</span>
+      </nav>
+      <span class="section__tag page-header__tag" style="background:#fef2f2;color:#dc2626;" data-fr="Informations essentielles" data-en="Essential information">Informations essentielles</span>
+      <h1 data-fr="Urgences médicales" data-en="Medical Emergencies">Urgences médicales</h1>
+      <p data-fr="En cas de doute sur la gravité d'une situation, appelez toujours le 112."
+         data-en="If in doubt about the severity of a situation, always call 112.">
+        En cas de doute sur la gravité d'une situation, appelez toujours le 112.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="urgences-page">
+    <div class="container">
+
+      <!-- ===== DECISION GRID ===== -->
+      <div class="decision-grid">
+
+        <!-- VITAL -->
+        <div class="decision-card decision-card--vital reveal visible">
+          <div class="decision-card__num">112</div>
+          <h2 data-fr="Urgence vitale" data-en="Life-threatening emergency">Urgence vitale</h2>
+          <p data-fr="Appelez le 112 immédiatement — ne conduisez pas vous-même, n'attendez pas."
+             data-en="Call 112 immediately — do not drive yourself, do not wait.">
+            Appelez le 112 immédiatement — ne conduisez pas vous-même, n'attendez pas.
+          </p>
+          <ul>
+            <li><i class="fas fa-circle"></i> <span data-fr="Douleur thoracique intense, essoufflement soudain" data-en="Intense chest pain, sudden shortness of breath">Douleur thoracique intense, essoufflement soudain</span></li>
+            <li><i class="fas fa-circle"></i> <span data-fr="Perte de connaissance, convulsions" data-en="Loss of consciousness, seizures">Perte de connaissance, convulsions</span></li>
+            <li><i class="fas fa-circle"></i> <span data-fr="AVC : visage asymétrique, bras tombant, parole difficile" data-en="Stroke: asymmetric face, arm falling, speech difficulty">AVC : visage asymétrique, bras tombant, parole difficile</span></li>
+            <li><i class="fas fa-circle"></i> <span data-fr="Hémorragie abondante incontrôlée" data-en="Severe uncontrolled bleeding">Hémorragie abondante incontrôlée</span></li>
+            <li><i class="fas fa-circle"></i> <span data-fr="Allergie sévère (anaphylaxie), détresse respiratoire" data-en="Severe allergy (anaphylaxis), respiratory distress">Allergie sévère (anaphylaxie), détresse respiratoire</span></li>
+          </ul>
+          <a href="tel:112" class="call-link call-link--red">
+            <i class="fas fa-phone"></i>
+            <span data-fr="Appeler le 112" data-en="Call 112">Appeler le 112</span>
+          </a>
+        </div>
+
+        <!-- NON-VITAL -->
+        <div class="decision-card decision-card--nonvital reveal visible" style="--delay:0.1s">
+          <div class="decision-card__num" style="font-size:2.2rem;padding-top:8px;" data-fr="Urgence non vitale" data-en="Non-vital urgency">Urgence non vitale</div>
+          <h2 data-fr="Hors des heures du cabinet" data-en="Outside practice hours">Hors des heures du cabinet</h2>
+          <p data-fr="Consultez la Maison médicale de garde ou rendez-vous aux urgences hospitalières selon le planning en vigueur."
+             data-en="Consult the out-of-hours medical centre or go to the hospital emergency department according to the current schedule.">
+            Consultez la Maison médicale de garde ou rendez-vous aux urgences hospitalières selon le planning en vigueur.
+          </p>
+          <ul>
+            <li><i class="fas fa-circle"></i> <span data-fr="Fièvre élevée sans signes de gravité" data-en="High fever without serious signs">Fièvre élevée sans signes de gravité</span></li>
+            <li><i class="fas fa-circle"></i> <span data-fr="Douleur aiguë non vitale (oreille, gorge, abdomen…)" data-en="Acute non-vital pain (ear, throat, abdomen…)">Douleur aiguë non vitale (oreille, gorge, abdomen…)</span></li>
+            <li><i class="fas fa-circle"></i> <span data-fr="Coupure, plaie superficielle nécessitant des soins" data-en="Cut, superficial wound requiring care">Coupure, plaie superficielle nécessitant des soins</span></li>
+            <li><i class="fas fa-circle"></i> <span data-fr="Chute sans perte de connaissance ni fracture évidente" data-en="Fall without loss of consciousness or obvious fracture">Chute sans perte de connaissance ni fracture évidente</span></li>
+          </ul>
+          <a href="https://santesecu.public.lu/fr/urgences-gardes/services-garde/maisons-medicales.html" target="_blank" rel="noopener" class="call-link call-link--green">
+            <i class="fas fa-house-medical"></i>
+            <span data-fr="Maisons médicales de garde" data-en="Out-of-hours medical centres">Maisons médicales de garde</span>
+          </a>
+        </div>
+
+      </div><!-- /decision-grid -->
+
+      <!-- CHL notice -->
+      <div class="chl-notice reveal visible">
+        <i class="fas fa-hospital"></i>
+        <p data-html="true"
+           data-fr="<strong>Urgences hospitalières à Luxembourg :</strong> Le <strong>Centre Hospitalier de Luxembourg (CHL)</strong> et les <strong>Hôpitaux Robert Schuman (Hôpital Kirchberg)</strong> assurent tous les deux les urgences en journée. Les nuits et les week-ends, ils se partagent les gardes selon un planning tournant. <a href='https://santesecu.public.lu/fr/urgences-gardes/services-garde/hopitaux-gardes.html' target='_blank' rel='noopener'>Consultez le planning officiel des hôpitaux de garde</a>."
+           data-en="<strong>Hospital emergency departments in Luxembourg:</strong> Both <strong>Centre Hospitalier de Luxembourg (CHL)</strong> and <strong>Hôpitaux Robert Schuman (Hôpital Kirchberg)</strong> operate emergency services during the day. Nights and weekends are covered on a rotating on-call schedule. <a href='https://santesecu.public.lu/fr/urgences-gardes/services-garde/hopitaux-gardes.html' target='_blank' rel='noopener'>Check the official hospital on-call schedule</a>.">
+          <strong>Urgences hospitalières à Luxembourg :</strong> Le <strong>Centre Hospitalier de Luxembourg (CHL)</strong> et les <strong>Hôpitaux Robert Schuman (Hôpital Kirchberg)</strong> assurent tous les deux les urgences en journée. Les nuits et les week-ends, ils se partagent les gardes selon un planning tournant. <a href="https://santesecu.public.lu/fr/urgences-gardes/services-garde/hopitaux-gardes.html" target="_blank" rel="noopener">Consultez le planning officiel des hôpitaux de garde</a>.
+        </p>
+      </div>
+
+      <!-- ===== RESOURCES SECTION ===== -->
+      <div class="section__header reveal visible" style="margin-bottom:32px;">
+        <span class="section__tag" data-fr="Ressources officielles" data-en="Official resources">Ressources officielles</span>
+        <h2 data-fr="Services de garde au Luxembourg" data-en="Out-of-hours services in Luxembourg">Services de garde au Luxembourg</h2>
+      </div>
+
+      <div class="resources-grid">
+        <a href="https://santesecu.public.lu/fr/urgences-gardes/services-garde/maisons-medicales.html" target="_blank" rel="noopener" class="resource-card reveal visible" style="--delay:0.05s">
+          <div class="resource-card__icon"><i class="fas fa-house-medical"></i></div>
+          <h3 data-fr="Maisons médicales" data-en="Out-of-hours medical centres">Maisons médicales</h3>
+          <p data-fr="Liste et localisation des maisons médicales de garde au Luxembourg." data-en="List and location of out-of-hours medical centres in Luxembourg.">Liste et localisation des maisons médicales de garde au Luxembourg.</p>
+          <span class="resource-card__arrow"><i class="fas fa-arrow-right"></i> <span data-fr="Accéder" data-en="Access">Accéder</span></span>
+        </a>
+        <a href="https://santesecu.public.lu/fr/urgences-gardes.html" target="_blank" rel="noopener" class="resource-card reveal visible" style="--delay:0.12s">
+          <div class="resource-card__icon"><i class="fas fa-shield-heart"></i></div>
+          <h3 data-fr="Urgences &amp; gardes" data-en="Emergencies &amp; on-call services">Urgences &amp; gardes</h3>
+          <p data-fr="Portail officiel du Ministère de la Santé : tous les services d'urgence et de garde." data-en="Official Ministry of Health portal: all emergency and on-call services.">Portail officiel du Ministère de la Santé : tous les services d'urgence et de garde.</p>
+          <span class="resource-card__arrow"><i class="fas fa-arrow-right"></i> <span data-fr="Accéder" data-en="Access">Accéder</span></span>
+        </a>
+        <a href="https://www.pharmacie.lu/pharmacies/garde" target="_blank" rel="noopener" class="resource-card reveal visible" style="--delay:0.19s">
+          <div class="resource-card__icon"><i class="fas fa-pills"></i></div>
+          <h3 data-fr="Pharmacies de garde" data-en="On-call pharmacies">Pharmacies de garde</h3>
+          <p data-fr="Trouver la pharmacie de garde la plus proche, ouverte 24h/24." data-en="Find the nearest on-call pharmacy, open 24/7.">Trouver la pharmacie de garde la plus proche, ouverte 24h/24.</p>
+          <span class="resource-card__arrow"><i class="fas fa-arrow-right"></i> <span data-fr="Accéder" data-en="Access">Accéder</span></span>
+        </a>
+      </div>
+
+      <!-- Cabinet note -->
+      <div class="cabinet-note reveal visible">
+        <i class="fas fa-calendar-check cabinet-note__icon"></i>
+        <p data-html="true"
+           data-fr="<strong>Urgence non vitale pendant les heures d'ouverture du cabinet ?</strong> Le Centre médical Le Damany propose des consultations urgentes du jour même, disponibles via <a href='https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095' target='_blank' rel='noopener'>Doctena</a>."
+           data-en="<strong>Non-vital emergency during practice opening hours?</strong> Centre médical Le Damany offers same-day urgent consultations, available via <a href='https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095' target='_blank' rel='noopener'>Doctena</a>.">
+          <strong>Urgence non vitale pendant les heures d'ouverture du cabinet ?</strong> Le Centre médical Le Damany propose des consultations urgentes du jour même, disponibles via <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095" target="_blank" rel="noopener">Doctena</a>.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="footer__logo">
+          <img src="images/logo.png" alt="Centre médical Le Damany" class="logo__img" />
+          <div class="logo__text">
+            <span class="logo__name">Centre médical Le Damany</span>
+            <span class="logo__subtitle">Luxembourg</span>
+          </div>
+        </a>
+        <p class="footer__tagline" data-fr="Cabinet de médecine générale conventionné CNS à Luxembourg." data-en="CNS-accredited general practice in Luxembourg.">Cabinet de médecine générale conventionné CNS à Luxembourg.</p>
+        <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095" target="_blank" rel="noopener" class="btn btn--primary footer__rdv-btn">
+          <i class="fas fa-calendar-plus"></i>
+          <span data-fr="Prendre RDV" data-en="Book appointment">Prendre RDV</span>
+        </a>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title" data-fr="Navigation" data-en="Navigation">Navigation</h3>
+        <ul class="footer__links">
+          <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+          <li><a href="about.html" data-fr="Le cabinet" data-en="About">Le cabinet</a></li>
+          <li><a href="infos.html" data-fr="Infos pratiques" data-en="Practical info">Infos pratiques</a></li>
+          <li><a href="urgences.html" data-fr="Urgences" data-en="Emergencies">Urgences</a></li>
+          <li><a href="mailto:secretariat@cm-ledamany.com" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title" data-fr="Adresse &amp; Horaires" data-en="Address &amp; Hours">Adresse &amp; Horaires</h3>
+        <address class="footer__address">
+          <p><i class="fas fa-location-dot"></i> 217 rue Albert Unden<br>L-2652 Luxembourg</p>
+          <p class="footer__hours-label" data-fr="Consultations :" data-en="Consultations:">Consultations :</p>
+          <p data-fr="Lundi – Vendredi : 8h00 – 19h00" data-en="Monday – Friday: 8:00am – 7:00pm">Lundi – Vendredi : 8h00 – 19h00</p>
+        </address>
+        <a href="https://maps.google.com/?q=217+rue+Albert+Unden,+2652+Luxembourg" target="_blank" rel="noopener" class="footer__maps-link">
+          <i class="fab fa-google"></i>
+          <span data-fr="Ouvrir dans Google Maps" data-en="Open in Google Maps">Ouvrir dans Google Maps</span>
+        </a>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title" data-fr="Urgences" data-en="Emergencies">Urgences</h3>
+        <div class="footer__emergency">
+          <div class="footer__emergency-item footer__emergency-item--vital">
+            <span class="footer__emergency-num">112</span>
+            <span data-fr="Urgences vitales" data-en="Life-threatening emergencies">Urgences vitales</span>
+          </div>
+          <div class="footer__emergency-item">
+            <span class="footer__emergency-num" style="font-size:0.75rem;letter-spacing:.02em;">Garde</span>
+            <span data-fr="Maison médicale de garde" data-en="Out-of-hours medical centre">Maison médicale de garde</span>
+          </div>
+        </div>
+        <a href="urgences.html" class="footer__emergency-link">
+          <span data-fr="Que faire en cas d'urgence ?" data-en="What to do in an emergency?">Que faire en cas d'urgence ?</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p data-fr="© 2026 Centre médical Le Damany · Tous droits réservés" data-en="© 2026 Centre médical Le Damany · All rights reserved">© 2026 Centre médical Le Damany · Tous droits réservés</p>
+        <div class="footer__bottom-links">
+          <a href="infos.html#confidentialite" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a>
+          <a href="infos.html#mentions" data-fr="Mentions légales" data-en="Legal notices">Mentions légales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

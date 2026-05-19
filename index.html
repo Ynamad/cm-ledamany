@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Centre médical Le Damany - Médecine généraliste à Luxembourg (Mühlenbach, Limpertsberg, Rollingergrund). Dr Andreea Le Damany, prise de RDV sur Doctena." />
+  <meta name="keywords" content="médecin généraliste Luxembourg, Centre médical Le Damany, Andreea Le Damany, médecine générale Luxembourg, Mühlenbach, Limpertsberg, Rollingergrund, Doctena Luxembourg, cabinet CNS Luxembourg" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cm-ledamany.lu/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Centre médical Le Damany – Médecin Généraliste Luxembourg" />
+  <meta property="og:description" content="Cabinet de médecine générale à Luxembourg. Dr Andreea Le Damany, médecin généraliste, gériatre et diabétologue. Convention CNS. Prise de RDV en ligne sur Doctena." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cm-ledamany.lu/" />
+  <meta property="og:locale" content="fr_LU" />
+  <meta property="og:site_name" content="Centre médical Le Damany" />
+
+  <title>Centre médical Le Damany - Médecin Généraliste Luxembourg</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
+  <link rel="icon" href="/my-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Centre médical Le Damany" />
+  <link rel="manifest" href="/my-favicon/site.webmanifest" />
+
+  <!-- JSON-LD : fiche cabinet médical -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Centre médical Le Damany",
+    "description": "Cabinet de médecine générale, gériatrie et diabétologie à Luxembourg. Conventionné CNS. Dr Andreea Le Damany.",
+    "url": "https://cm-ledamany.lu",
+    "telephone": "+352285189422",
+    "email": "secretariat@cm-ledamany.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "217 rue Albert Unden",
+      "addressLocality": "Luxembourg",
+      "postalCode": "L-2652",
+      "addressCountry": "LU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.6116,
+      "longitude": 6.1319
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    ],
+    "medicalSpecialty": ["General Practice", "Geriatric Medicine", "Diabetology"],
+    "currenciesAccepted": "EUR",
+    "priceRange": "Conventionné CNS",
+    "sameAs": [
+      "https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095"
+    ],
+    "employee": {
+      "@type": "Physician",
+      "name": "Dr Andreea Le Damany",
+      "jobTitle": "Médecin généraliste, gériatre, diabétologue",
+      "knowsLanguage": ["fr", "en", "ro"]
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER (shared component) ===== -->
+  <header class="header scrolled" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/logo.png" alt="Centre médical Le Damany" class="logo__img" />
+        <div class="logo__text">
+          <span class="logo__name">Centre médical Le Damany</span>
+          <span class="logo__subtitle" data-fr="Médecine générale · Luxembourg" data-en="General practice · Luxembourg">Médecine générale · Luxembourg</span>
+        </div>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link active" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li><a href="services.html" class="nav__link" data-fr="Services" data-en="Services">Services</a></li>
+          <li><a href="about.html" class="nav__link" data-fr="Le cabinet" data-en="About">Le cabinet</a></li>
+          <li><a href="infos.html" class="nav__link" data-fr="Infos pratiques" data-en="Practical info">Infos pratiques</a></li>
+          <li><a href="urgences.html" class="nav__link nav__link--urgent" data-fr="Urgences" data-en="Emergencies">Urgences</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-toggle__option active" data-lang="fr">FR</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__option" data-lang="en">EN</span>
+        </button>
+        <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095" target="_blank" rel="noopener" class="btn btn--primary rdv-btn" aria-label="Prendre rendez-vous sur Doctena">
+          <i class="fas fa-calendar-plus"></i>
+          <span data-fr="Prendre RDV" data-en="Book now">Prendre RDV</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+
+    <div class="container hero__content">
+      <h1 class="hero__title reveal visible" style="--delay:0.05s">
+        <span data-fr="Centre médical" data-en="Centre médical">Centre médical</span><br>
+        <span class="hero__title-accent">Le Damany</span>
+      </h1>
+      <p class="hero__subtitle reveal visible" style="--delay:0.12s" data-fr="Soins complets et polyvalents à Luxembourg" data-en="Complete and comprehensive care in Luxembourg">Soins complets et polyvalents à Luxembourg</p>
+      <p class="hero__desc reveal visible" style="--delay:0.18s"
+         data-fr="Dr Andreea Le Damany vous reçoit du lundi au vendredi, de 8h à 19h dans son cabinet, à la confluence de Limpertsberg, Mühlenbach et Rollingergrund."
+         data-en="Dr Andreea Le Damany sees patients Monday to Friday, 8am–7pm in her practice, at the confluence of Limpertsberg, Mühlenbach and Rollingergrund.">
+        Dr Andreea Le Damany vous reçoit du lundi au vendredi, de 8h à 19h dans son cabinet, à la confluence de Limpertsberg, Mühlenbach et Rollingergrund.
+      </p>
+
+      <div class="hero__badge reveal visible" style="--delay:0.25s; margin-bottom:20px;">
+        <i class="fas fa-shield-heart"></i>
+        <span data-fr="Cabinet conventionné CNS · Luxembourg" data-en="CNS Accredited Practice · Luxembourg">Cabinet conventionné CNS · Luxembourg</span>
+      </div>
+
+      <div class="hero__ctas reveal visible" style="--delay:0.32s">
+        <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095" target="_blank" rel="noopener" class="btn btn--primary btn--large" aria-label="Prendre rendez-vous en ligne sur Doctena">
+          <i class="fas fa-calendar-check"></i>
+          <span data-fr="Prendre rendez-vous en ligne" data-en="Book appointment online">Prendre rendez-vous en ligne</span>
+        </a>
+        <a href="infos.html" class="btn btn--secondary btn--large">
+          <i class="fas fa-map-marker-alt"></i>
+          <span data-fr="Infos pratiques" data-en="Practical info">Infos pratiques</span>
+        </a>
+      </div>
+
+      <div class="hero__info reveal visible" style="--delay:0.42s">
+        <div class="hero__info-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <span class="hero__info-label" data-fr="Consultations" data-en="Consultations">Consultations</span>
+            <span class="hero__info-value" data-fr="Lun–Ven · 8h–19h" data-en="Mon–Fri · 8am–7pm">Lun–Ven · 8h–19h</span>
+          </div>
+        </div>
+        <div class="hero__info-item">
+          <i class="fas fa-video"></i>
+          <div>
+            <span class="hero__info-label" data-fr="Téléconsultation" data-en="Teleconsultation">Téléconsultation</span>
+            <span class="hero__info-value" data-fr="Disponible via Doctena" data-en="Available on Doctena">Disponible via Doctena</span>
+          </div>
+        </div>
+        <div class="hero__info-item">
+          <i class="fas fa-flask"></i>
+          <div>
+            <span class="hero__info-label" data-fr="Labo BioNext" data-en="BioNext Lab">Labo BioNext</span>
+            <span class="hero__info-value" data-fr="Sur place · Lun–Ven 6h–12h" data-en="On site · Mon–Fri 6am–12pm">Sur place · Lun–Ven 6h–12h</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bandeau avis — intégré dans le hero sous les pills -->
+      <div class="hero__reviews reveal visible" style="--delay:0.52s" id="heroReviewsAnchor">
+        <div class="hero__reviews-header">
+          <span class="hero__reviews-label">
+            <i class="fas fa-star"></i>
+            <span data-fr="Avis patients vérifiés · Doctena" data-en="Verified patient reviews · Doctena">Avis patients vérifiés · Doctena</span>
+          </span>
+          <div class="hero__reviews-controls">
+            <button class="reviews-nav-btn" id="reviewsPrev" aria-label="Avis précédent"><i class="fas fa-chevron-left"></i></button>
+            <button class="reviews-nav-btn" id="reviewsNext" aria-label="Avis suivant"><i class="fas fa-chevron-right"></i></button>
+            <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095/feedback" target="_blank" rel="noopener" class="reviews-doctena-link">
+              <span data-fr="Tous les avis" data-en="All reviews">Tous les avis</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="reviews-track-wrapper" id="reviewsWrapper">
+          <div class="reviews-track" id="reviewsTrack"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-dot"></span>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAND ===== -->
+  <section class="expertise-section">
+    <div class="container">
+      <div class="expertise-grid">
+        <div class="expertise-item reveal visible" style="--delay:0.05s">
+          <div class="expertise-item__number" data-count="30" data-suffix="+">30+</div>
+          <div class="expertise-item__label" data-fr="Ans d'expérience médicale" data-en="Years of medical experience">Ans d'expérience médicale</div>
+        </div>
+        <div class="expertise-item reveal visible" style="--delay:0.12s">
+          <div class="expertise-item__number" data-count="4" data-suffix="">4</div>
+          <div class="expertise-item__label" data-fr="Spécialités médicales" data-en="Medical specialties">Spécialités médicales</div>
+        </div>
+        <div class="expertise-item reveal visible" style="--delay:0.18s">
+          <div style="margin-bottom:16px;">
+            <div class="lang-badges">
+              <span class="lang-badge">🇫🇷 Français</span>
+              <span class="lang-badge">🇬🇧 English</span>
+              <span class="lang-badge">🇷🇴 Română</span>
+            </div>
+          </div>
+          <div class="expertise-item__label" data-fr="Langues de consultation" data-en="Consultation languages">Langues de consultation</div>
+        </div>
+        <div class="expertise-item reveal visible" style="--delay:0.24s">
+          <div class="expertise-item__number" style="-webkit-text-fill-color:unset;color:var(--green-dark);font-size:1.6rem;">CNS</div>
+          <div class="expertise-item__label" data-fr="Conventionné · Remboursement CNS" data-en="Accredited · CNS reimbursement">Conventionné · Remboursement CNS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES OVERVIEW ===== -->
+  <section class="section services-preview">
+    <div class="container">
+      <div class="section__header reveal visible">
+        <span class="section__tag" data-fr="Nos spécialités" data-en="Our specialties">Nos spécialités</span>
+        <h2 data-html="true"
+            data-fr="Une médecine globale,<br>centrée sur vous"
+            data-en="Holistic medicine,<br>centred on you">Une médecine globale,<br>centrée sur vous</h2>
+        <p class="section__desc"
+           data-fr="Médecine générale, gériatrie, diabétologie et médecine préventive : une prise en charge complète sous un même toit."
+           data-en="General medicine, geriatrics, diabetology and preventive medicine: complete care under one roof.">
+          Médecine générale, gériatrie, diabétologie et médecine préventive : une prise en charge complète sous un même toit.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <a href="services.html" class="service-card reveal visible" style="--delay:0.05s">
+          <div class="service-card__icon"><i class="fas fa-stethoscope"></i></div>
+          <h3 data-fr="Médecine générale" data-en="General Medicine">Médecine générale</h3>
+          <p data-fr="Consultations courantes, bilans, prescriptions, coordination des soins et prise en charge globale." data-en="General consultations, health check-ups, prescriptions, care coordination and holistic management.">Consultations courantes, bilans, prescriptions, coordination des soins et prise en charge globale.</p>
+        </a>
+        <a href="services.html#geriatrie" class="service-card reveal visible" style="--delay:0.12s">
+          <div class="service-card__icon"><i class="fas fa-heart-pulse"></i></div>
+          <h3 data-fr="Gériatrie" data-en="Geriatrics">Gériatrie</h3>
+          <p data-fr="Suivi spécialisé des personnes âgées polypathologiques, prévention des chutes, bilan des troubles cognitifs." data-en="Specialised follow-up for elderly patients with multiple conditions, fall prevention, cognitive assessment.">Suivi spécialisé des personnes âgées polypathologiques, prévention des chutes, bilan des troubles cognitifs.</p>
+        </a>
+        <a href="services.html#diabetologie" class="service-card reveal visible" style="--delay:0.19s">
+          <div class="service-card__icon"><i class="fas fa-droplet"></i></div>
+          <h3 data-fr="Diabétologie" data-en="Diabetology">Diabétologie</h3>
+          <p data-fr="Suivi diabète type 1 &amp; 2, éducation thérapeutique, conseil nutritionnel." data-en="Type 1 &amp; 2 diabetes, therapeutic education, nutritional counselling.">Suivi diabète type 1 &amp; 2, éducation thérapeutique, conseil nutritionnel.</p>
+        </a>
+        <a href="services.html#prevention" class="service-card reveal visible" style="--delay:0.26s">
+          <div class="service-card__icon"><i class="fas fa-shield-virus"></i></div>
+          <h3 data-fr="Médecine préventive" data-en="Preventive Medicine">Médecine préventive</h3>
+          <p data-fr="Vaccinations, dépistages, certificats, sevrage tabagique, médecine du voyage." data-en="Vaccinations, screenings, certificates, smoking cessation, travel medicine.">Vaccinations, dépistages, certificats, sevrage tabagique, médecine du voyage.</p>
+        </a>
+      </div>
+
+      <div class="section__cta reveal visible">
+        <a href="services.html" class="btn btn--outline" data-fr="Tous les services" data-en="All services">Tous les services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM SECTION ===== -->
+  <section class="team-section section">
+    <div class="container">
+      <div class="section__header reveal visible">
+        <span class="section__tag" data-fr="L'équipe médicale" data-en="The medical team">L'équipe médicale</span>
+        <h2 data-fr="Des médecins engagés pour votre santé" data-en="Dedicated physicians for your health">Des médecins engagés pour votre santé</h2>
+      </div>
+      <div class="team-grid">
+
+        <!-- Dr Le Damany -->
+        <div class="team-card reveal visible" style="--delay:0.08s">
+          <div class="team-avatar team-avatar--dr">👩‍⚕️</div>
+          <h3>Dr Andreea Le Damany</h3>
+          <p class="team-card__role" data-fr="Médecin généraliste · Gériatre · Diabétologue · Urgentiste" data-en="GP · Geriatrician · Diabetologist · Emergency physician">Médecin généraliste · Gériatre · Diabétologue · Urgentiste</p>
+          <div class="team-card__langs">
+            <span class="team-card__lang">🇫🇷 FR</span>
+            <span class="team-card__lang">🇬🇧 EN</span>
+            <span class="team-card__lang">🇷🇴 RO</span>
+          </div>
+          <p data-fr="Diplômée de l'Université Paris 7 (Médaille d'Argent), ancienne Chef de Pôle au CH Bretagne Sud. Expertise en gériatrie, diabétologie et médecine d'urgence."
+             data-en="Graduate of Université Paris 7 (Silver Medal), former Head of Department at CH Bretagne Sud. Expertise in geriatrics, diabetology and emergency medicine.">
+            Diplômée de l'Université Paris 7 (Médaille d'Argent), ancienne Chef de Pôle au CH Bretagne Sud. Expertise en gériatrie, diabétologie et médecine d'urgence.
+          </p>
+          <a href="about.html" class="btn btn--secondary btn--small" data-fr="Son parcours" data-en="Her background">
+            <i class="fas fa-user"></i>
+            <span data-fr="Son parcours" data-en="Her background">Son parcours</span>
+          </a>
+        </div>
+
+        <!-- Recruitment -->
+        <div class="team-card team-card--recruit reveal visible" style="--delay:0.18s">
+          <div class="team-avatar team-avatar--recruit"><i class="fas fa-user-plus"></i></div>
+          <h3 data-fr="Nous recrutons" data-en="We are recruiting">Nous recrutons</h3>
+          <p class="team-card__role" data-fr="Médecin" data-en="Physician">Médecin</p>
+          <div class="team-card__langs">
+            <span class="team-card__lang" style="background:rgba(0,51,102,0.1);color:var(--blue-logo);border-color:rgba(0,51,102,0.2);" data-fr="Poste ouvert" data-en="Open position">Poste ouvert</span>
+          </div>
+          <p data-fr="Le Centre médical Le Damany est en plein développement et recherche un médecin pour rejoindre une structure moderne au cœur de Luxembourg."
+             data-en="Centre médical Le Damany is developing and seeks a physician to join a modern practice in the heart of Luxembourg.">
+            Le Centre médical Le Damany est en plein développement et recherche un médecin pour rejoindre une structure moderne au cœur de Luxembourg.
+          </p>
+          <a href="https://lu.indeed.com/viewjob?jk=f32af8c9e22e3333&from=shareddesktop_copy" target="_blank" rel="noopener" class="btn btn--small btn--indeed">
+            <img src="images/indeed_icon.png" alt="Indeed" style="height: 1em; width: auto; vertical-align: middle; margin-right: 4px;">
+            <span data-fr="Voir l'offre sur Indeed" data-en="View offer on Indeed">Voir l'offre sur Indeed</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BIONEXT SECTION ===== -->
+  <section class="bionext-section">
+    <div class="container">
+      <div class="bionext-inner">
+        <div>
+          <div class="bionext-badge reveal visible">
+            <i class="fas fa-flask"></i>
+            <span data-fr="Partenaire sur place" data-en="On-site partner">Partenaire sur place</span>
+          </div>
+          <div class="reveal visible bionext-logo-wrap" style="--delay:0.05s; margin-bottom:20px;">
+            <img src="images/bionext-logo-text.png" alt="BioNext Luxembourg" class="bionext-logo-img" />
+          </div>
+          <p class="reveal visible" style="--delay:0.15s"
+             data-fr="Prises de sang, analyses et prélèvements directement au sein du cabinet – du lundi au samedi matin."
+             data-en="Blood tests, analyses and samples within the practice – Monday to Saturday morning.">
+            Prises de sang, analyses et prélèvements directement au sein du cabinet – du lundi au samedi matin.
+          </p>
+          <div class="bionext-hours reveal visible" style="--delay:0.22s">
+            <div class="bionext-hour-card">
+              <div class="bionext-hour-card__day" data-fr="Lun – Ven" data-en="Mon – Fri">Lun – Ven</div>
+              <div class="bionext-hour-card__time">06:00 – 12:00</div>
+            </div>
+            <div class="bionext-hour-card">
+              <div class="bionext-hour-card__day" data-fr="Samedi" data-en="Saturday">Samedi</div>
+              <div class="bionext-hour-card__time">07:00 – 12:00</div>
+            </div>
+          </div>
+          <div class="reveal visible" style="--delay:0.3s; margin-top:24px;">
+            <a href="https://www.bionext.lu/fr/laboratoire-luxembourg-limpertsberg-rue-albert-unden" target="_blank" rel="noopener" class="btn btn--secondary btn--small">
+              <i class="fas fa-external-link-alt"></i>
+              <span data-fr="Site BioNext" data-en="BioNext website">Site BioNext</span>
+            </a>
+          </div>
+        </div>
+        <div class="bionext-visual reveal-right visible" style="--delay:0.1s">
+          <img src="images/bionext-logo.png" alt="BioNext Luxembourg" class="bionext-visual-logo" />
+          <p style="font-size:0.85rem;color:var(--slate-light);margin-top:12px;" data-fr="217 rue Albert Unden, L-2652 Luxembourg" data-en="217 rue Albert Unden, L-2652 Luxembourg">217 rue Albert Unden, L-2652 Luxembourg</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACCESS & LOCALISATION ===== -->
+  <section class="contact-band">
+    <div class="container">
+      <div class="section__header reveal visible" style="margin-bottom:40px;">
+        <span class="section__tag" data-fr="Nous trouver" data-en="Find us">Nous trouver</span>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-info">
+            <div class="contact-item reveal visible" style="--delay:0.05s">
+              <div class="contact-item__icon"><i class="fas fa-location-dot"></i></div>
+              <div class="contact-item__content">
+                <div class="contact-item__label" data-fr="Adresse" data-en="Address">Adresse</div>
+                <div class="contact-item__value">217 rue Albert Unden<br>L-2652 Luxembourg</div>
+              </div>
+            </div>
+            <div class="contact-item reveal visible" style="--delay:0.1s">
+              <div class="contact-item__icon"><i class="fas fa-clock"></i></div>
+              <div class="contact-item__content">
+                <div class="contact-item__label" data-fr="Consultations" data-en="Consultations">Consultations</div>
+                <div class="contact-item__value" data-fr="Lundi – Vendredi · 8h00 – 19h00" data-en="Monday – Friday · 8:00am – 7:00pm">Lundi – Vendredi · 8h00 – 19h00</div>
+              </div>
+            </div>
+            <div class="contact-item reveal visible" style="--delay:0.15s">
+              <div class="contact-item__icon"><i class="fas fa-bus"></i></div>
+              <div class="contact-item__content">
+                <div class="contact-item__label" data-fr="Bus" data-en="Bus">Bus</div>
+                <div class="contact-item__value" data-fr="Arrêt Peiffeschbierg · Lignes 21, 33" data-en="Stop Peiffeschbierg · Lines 21, 33">Arrêt Peiffeschbierg · Lignes 21, 33</div>
+              </div>
+            </div>
+            <div class="contact-item reveal visible" style="--delay:0.2s">
+              <div class="contact-item__icon"><i class="fas fa-wheelchair"></i></div>
+              <div class="contact-item__content">
+                <div class="contact-item__label" data-fr="Accessibilité" data-en="Accessibility">Accessibilité</div>
+                <div class="contact-item__value" data-fr="Accès facilité · Rez-de-chaussée · Toilettes PMR" data-en="Easy access · Ground floor · Disabled toilets">Accès facilité · Rez-de-chaussée · Toilettes PMR</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emergency block -->
+          <div class="emergency-band reveal visible" style="--delay:0.28s">
+            <div class="emergency-band__num">112</div>
+            <div>
+              <p data-html="true"
+                 data-fr="<strong>Urgence vitale ?</strong> Appelez le 112 immédiatement.<br>Urgences non vitales : consultez les <a href='urgences.html'>ressources de garde</a>."
+                 data-en="<strong>Life-threatening emergency?</strong> Call 112 immediately.<br>Non-vital emergencies: see the <a href='urgences.html'>on-call resources</a>.">
+                <strong>Urgence vitale ?</strong> Appelez le 112 immédiatement.<br>Urgences non vitales : consultez les <a href="urgences.html">ressources de garde</a>.
+              </p>
+            </div>
+            <a href="urgences.html" class="btn btn--small btn--red" data-fr="Que faire ?" data-en="What to do?">
+              <i class="fas fa-triangle-exclamation"></i>
+              <span data-fr="Que faire ?" data-en="What to do?">Que faire ?</span>
+            </a>
+          </div>
+
+          <div style="margin-top:20px;" class="reveal visible" style="--delay:0.35s">
+            <a href="https://maps.google.com/?q=217+rue+Albert+Unden,+2652+Luxembourg" target="_blank" rel="noopener" class="btn btn--outline">
+              <i class="fab fa-google"></i>
+              <span data-fr="Itinéraire Google Maps" data-en="Google Maps directions">Itinéraire Google Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal-right visible" style="--delay:0.12s">
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2585.4!2d6.1376!3d49.6144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s217+Rue+Albert+Unden%2C+2652+Luxembourg!5e0!3m2!1sfr!2slb!4v1700000000000"
+              width="100%" height="440"
+              style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Centre médical Le Damany – 217 rue Albert Unden, Luxembourg">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (shared component) ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="footer__logo">
+          <img src="images/logo.png" alt="Centre médical Le Damany" class="logo__img" />
+          <div class="logo__text">
+            <span class="logo__name">Centre médical Le Damany</span>
+            <span class="logo__subtitle">Luxembourg</span>
+          </div>
+        </a>
+        <p class="footer__tagline" data-fr="Cabinet de médecine générale conventionné CNS à Luxembourg." data-en="CNS-accredited general practice in Luxembourg.">Cabinet de médecine générale conventionné CNS à Luxembourg.</p>
+        <a href="https://www.doctena.lu/fr/specialite/medecin-generaliste/dr-andreea-le-damany-1717095" target="_blank" rel="noopener" class="btn btn--primary footer__rdv-btn">
+          <i class="fas fa-calendar-plus"></i>
+          <span data-fr="Prendre RDV" data-en="Book appointment">Prendre RDV</span>
+        </a>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title" data-fr="Navigation" data-en="Navigation">Navigation</h3>
+        <ul class="footer__links">
+          <li><a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li><a href="services.html" data-fr="Services" data-en="Services">Services</a></li>
+          <li><a href="about.html" data-fr="Le cabinet" data-en="About">Le cabinet</a></li>
+          <li><a href="infos.html" data-fr="Infos pratiques" data-en="Practical info">Infos pratiques</a></li>
+          <li><a href="urgences.html" data-fr="Urgences" data-en="Emergencies">Urgences</a></li>
+          <li><a href="mailto:secretariat@cm-ledamany.com" data-fr="Nous contacter" data-en="Contact us">Nous contacter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title" data-fr="Adresse &amp; Horaires" data-en="Address &amp; Hours">Adresse &amp; Horaires</h3>
+        <address class="footer__address">
+          <p><i class="fas fa-location-dot"></i> 217 rue Albert Unden<br>L-2652 Luxembourg</p>
+          <p class="footer__hours-label" data-fr="Consultations :" data-en="Consultations:">Consultations :</p>
+          <p data-fr="Lundi – Vendredi : 8h00 – 19h00" data-en="Monday – Friday: 8:00am – 7:00pm">Lundi – Vendredi : 8h00 – 19h00</p>
+        </address>
+        <a href="https://maps.google.com/?q=217+rue+Albert+Unden,+2652+Luxembourg" target="_blank" rel="noopener" class="footer__maps-link">
+          <i class="fab fa-google"></i>
+          <span data-fr="Ouvrir dans Google Maps" data-en="Open in Google Maps">Ouvrir dans Google Maps</span>
+        </a>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__col-title" data-fr="Urgences" data-en="Emergencies">Urgences</h3>
+        <div class="footer__emergency">
+          <div class="footer__emergency-item footer__emergency-item--vital">
+            <span class="footer__emergency-num">112</span>
+            <span data-fr="Urgences vitales" data-en="Life-threatening emergencies">Urgences vitales</span>
+          </div>
+          <div class="footer__emergency-item">
+            <span class="footer__emergency-num" style="font-size:0.75rem;letter-spacing:.02em;">Garde</span>
+            <span data-fr="Maison médicale de garde" data-en="Out-of-hours medical centre">Maison médicale de garde</span>
+          </div>
+        </div>
+        <a href="urgences.html" class="footer__emergency-link">
+          <span data-fr="Que faire en cas d'urgence ?" data-en="What to do in an emergency?">Que faire en cas d'urgence ?</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p data-fr="© 2026 Centre médical Le Damany · Tous droits réservés" data-en="© 2026 Centre médical Le Damany · All rights reserved">© 2026 Centre médical Le Damany · Tous droits réservés</p>
+        <div class="footer__bottom-links">
+          <a href="infos.html#confidentialite" data-fr="Confidentialité" data-en="Privacy">Confidentialité</a>
+          <a href="infos.html#mentions" data-fr="Mentions légales" data-en="Legal notices">Mentions légales</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GDPR -->
+  <script src="js/main.js"></script>
+</body>
+</html>
