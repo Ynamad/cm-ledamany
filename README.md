@@ -1,6 +1,6 @@
 # Centre Médical Le Damany — Site Internet Officiel
 
-Ce dépôt contient le code source du site internet vitrine pour le Centre Médical Le Damany, cabinet de médecine générale situé à Luxembourg (Mühlenbach, Limpertsberg, Rollingergrund). Le site est conçu pour offrir une expérience utilisateur fluide, accessible et bilingue aux patients du docteur Andreea Le Damany.
+Ce dépôt contient le code source du site internet pour le Centre Médical Le Damany, cabinet de médecine générale situé à Luxembourg (Mühlenbach, Limpertsberg, Rollingergrund). Le site est conçu pour offrir une expérience utilisateur fluide, accessible et bilingue aux patients du docteur Andreea Le Damany.
 
 ## 🌐 Informations Générales
 
